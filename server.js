@@ -39,7 +39,6 @@ app.post("/people", async (req, res) => {
       // Log the received request body
       console.log("Received request body:", req.body);
 
-      // Make sure all required fields are provided
       if (!full_name || !email || !password || !rfid || !role) {
           return res.status(400).json({ error: "Missing required fields" });
       }
